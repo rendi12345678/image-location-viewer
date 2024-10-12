@@ -142,11 +142,11 @@ fn main() {
         );
 
         // Print the URL to the console
-        println!("Opening the following URL in Midori:\n{}", maps_url);
+        println!("Opening the following URL:\n{}", maps_url);
 
-        // Open the URL using Midori
-        if let Err(e) = Command::new("midori").arg(&maps_url).spawn() {
-            eprintln!("Failed to open URL in Midori: {}", e);
+        // Open the URL using xdg-open
+        if let Err(e) = Command::new("xdg-open").arg(&maps_url).spawn() {
+            eprintln!("Failed to open URL in the browser: {}", e);
         }
     } else {
         eprintln!("No GPS data found in the image.");
