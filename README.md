@@ -40,5 +40,4 @@ paru -Sy perl-image-exiftool
 git clone git@github.com:rendi12345678/image-location-viewer.git
 cd image-location-viewer
 cargo run <image url>
-
 ```
